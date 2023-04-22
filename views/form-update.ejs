@@ -1,0 +1,10 @@
+<h1>Cập Nhật thông tin Giang Vien</h1>
+
+<form action="/update" method="POST">
+    ID: <input type="text" name="id" value="<%= GiangVien.id  %>"><br>
+    MaGiangVien: <input type="text" name="MaGiangVien" value="<%= GiangVien.MaGiangVien  %>"><br>
+    Ho_Ten: <input type="text" name="Ho_Ten" value="<%= GiangVien.Ho_Ten  %>"><br>
+    DiaChi: <input type="text" name="DiaChi" value="<%= GiangVien.DiaChi %>"><br>
+    TelNum: <input type="number" name="SDT" placeholder="hãy nhập số"value="<%= GiangVien.TelNum  %>"><br>
+    <button type="submit">Cập Nhật</button>
+</form>

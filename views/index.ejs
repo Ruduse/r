@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Danh sách Môn Học</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Danh sách Giang Vien</h1>
+    <a href="/form-add"><button>Thêm Danh sách</button></a><br>
+    <table border="1">
+      <tr>
+        <th>ID</th>
+        <th>MaGiangVien</th>
+        <th>HoTen</th>
+        <th>DiaChi</th>
+        <th>TelNum</th>
+        <th>hành động</th>
+      </tr>
+      <% GiangVien.forEach(item =>{ %>
+        <tr>
+          <td><%= item._id %></td>
+          <td><%= item.MaGiangVien %></td>
+          <td><%= item.HoTen%></td>
+          <td><%= item.DiaChi%></td>
+          <td><%= item.TelNum %></td>
+          <td><a href="/form-update/<%= item.id %>">Update</a> || <a href="/form-delete/<%= item._id %>">Delete</a></td>
+        </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
